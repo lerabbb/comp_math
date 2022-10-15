@@ -15,9 +15,9 @@ double trap_method(double a, double n, double h){
 
 double Simpsons_method(double a, double b, double h, double n){
     double res = func(a) + func(b);
-    for(int i=1; i <= n/2; i++){
+    for(int i=1; i < n/2; i++){
         res += 4 * func(a + (2*i-1) * h);
-        if(i == n/2) continue;
+        //if(i == n/2) continue;
         res += 2 * func(a + (2*i) * h);
     }
     res = res * h / 3;
